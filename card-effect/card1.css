@@ -1,0 +1,70 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+height:100vh;
+background: rgba(0, 0, 0, 0.9)
+}
+
+.card{
+   width: 380px;
+   height:420px;
+   border:1px solid black;
+   position: relative;
+   cursor: pointer;
+   overflow: hidden;
+   transition: box-shadow 1.4s; 
+  
+}
+.card:hover{
+    box-shadow: 0px 1px 16px 8px rgba(0,255,255,0.6);
+}
+.card::before{
+   content:"";
+ position: absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:130%;
+ height: 150%;
+  /* background-image: conic-gradient(red 0deg,transparent 100deg ,transparent 140deg,#ff00bb 200deg ,#ff00bb 260deg, transparent 260deg, transparent 300deg ,green 300deg);
+  transition: transform 0.3s; */
+
+  background-image:conic-gradient(#ff00bb 0deg, #ff00bb 90deg, transparent 130deg, transparent 180deg, #4530ff 180deg, #4530ff 270deg, transparent 310deg,transparent 360deg) ;
+  transition: transform 1.2s; 
+ 
+}
+.card:hover::before{
+    transform: translate(-50%,-50%) rotate(170deg);
+ 
+}
+
+.card::after{
+    content :"";
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:355px;
+    height:395px;
+    background: #000; 
+    color:rgb(99, 193, 240);
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 2.3rem;
+    text-align: center;
+   vertical-align: middle;
+    transition: font-size 0.3s;
+    
+
+}
+.card:hover::after{
+   font-size: 1.8rem;
+}
